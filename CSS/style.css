@@ -1,0 +1,103 @@
+/* Zresetowanie domyślnych ustawień */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* płynne przewijanie do kotwic */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    
+    background-color: var(--bg-color, #ffffff);
+    color: var(--text-color, #1f2937);
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+/* Domyślne kolory */
+:root {
+    --header-bg: #ffffff;
+    --btn-color: #202a43;
+    --bg-color: #f2f2f2;
+    --text-color: #1f2937;
+    --hover-color: #3b82f6;
+    --border-color: #e5e7eb;
+}
+
+/* Dla trybu ciemnego */
+body.dark-theme { 
+    --header-bg: #111827;
+    --btn-color: #dedede;
+    --bg-color: #161e30;
+    --text-color: #f9fafb;
+    --hover-color: #60a5fa;
+    --border-color: #374151;
+}
+
+/* Przyklejony header */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-links a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+    letter-spacing: 0.5px;
+}
+
+.theme-toggle {
+    background-color: var(--btn-color);
+    color: var(--bg-color);
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: padding 0.2s;
+}
+.theme-toggle:hover {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}

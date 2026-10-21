@@ -9,15 +9,18 @@
 
 	<title>Portfolio</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-	<header>
-		<h1>Portfolio</h1>
-		<nav aria-label="Główna nawigacja">
+	<header class="main-header">
+		<h1 class="logo">
+			<a href="index.html" aria-label="Przejdź do strony głównej">Portfolio</a>
+		</h1>
+		<nav class="nav-links" aria-label="Główna nawigacja">
 			<a href="#o-mnie">O mnie</a>
 			<a href="#projekty">Projekty</a>
 			<a href="#kontakt">Kontakt</a>
+            <button id="theme-toggle" class="theme-toggle">Light</button>
 		</nav>
 	</header>
 
@@ -36,12 +39,13 @@
 			<h2>Kontakt</h2>
 			<p>Jakies dane kontaktowe itd.</p>
 		</section>
+        
 	</main>
 
 	<footer>
 		<p>&copy; 2026 Piotr Piasko. Wszelkie prawa zastrzeżone.</p>
 	</footer>
 
-	<script src="script.js"></script>
+	<script src="JS/script.js"></script>
 </body>
 </html>
