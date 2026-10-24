@@ -10,6 +10,7 @@
 	<title>Portfolio</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 	<header class="main-header">
@@ -18,13 +19,13 @@
     </h1>
     
     <nav class="nav-links" id="nav-links" aria-label="Główna nawigacja">
-        <a href="#o-mnie">O mnie</a>
-        <a href="#projekty">Projekty</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="o-mnie.html">O mnie</a>
+		<a href="projekty.html">Projekty</a>
+		<a href="#kontakt">Kontakt</a>
     </nav>
 
     <div class="header-actions">
-        <button id="theme-toggle" class="theme-toggle">Light</button>
+        <button id="theme-toggle" class="theme-toggle"><i id="theme-icon" class="fa-regular fa-sun"></i></button>
         <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -34,20 +35,80 @@
 </header>
 
 	<main>
-		<section id="o-mnie">
-			<h2>O mnie</h2>
-			<p>Informacje co tu robie i co tu sie znajdzie</p>
-		</section>
+		<main class="container">
+    <section id="o-mnie-zajawka" class="bento-section">
+        <div class="bento-grid-hero">
+            <div class="bento-card hero-intro">
+                <h2>Cześć, jestem Piotr. Tworzę nowoczesne aplikacje webowe i strony internetowe.</h2>
+                <p>Skupiam się na czystym kodzie, wydajności i praktycznych rozwiązaniach. Poza programowaniem interesuję się sprzętem komputerowym, drukiem 3D i nowoczesnymi technologiami.</p>
+                <div class="card-actions">
+                    <a href="o-mnie.html" class="btn btn-primary">Poznaj mnie bliżej &rarr;</a>
+                </div>
+            </div>
 
-		<section id="projekty">
-			<h2>Projekty</h2>
-			<p>W tym miejscu będa projekty</p>
-		</section>
+            <div class="bento-card hero-skills">
+                <h3>Główne technologie</h3>
+                <p>Narzędzia i języki, z którymi regularnie pracuję:</p>
+                <div class="skills-pills">
+                    <span class="pill">HTML5 & CSS3</span>
+                    <span class="pill">JavaScript</span>
+					<span class="pill">TypeScript</span>
+                    <span class="pill">React / Next.js</span>
+                    <span class="pill">Tailwind CSS</span>
+                    <span class="pill">C / C++</span>
+					<span class="pill">Python</span>
+                    <span class="pill">SQL & Firebase</span>
+                    <span class="pill">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-		<section id="kontakt">
-			<h2>Kontakt</h2>
-			<p>Jakies dane kontaktowe itd.</p>
-		</section>
+    <section id="wyrozniony-projekt" class="bento-section">
+        <div class="section-header">
+            <h2>Ostatni projekt</h2>
+        </div>
+
+        <div class="bento-card featured-project">
+            <div class="project-image">
+                <img src="./images/projekt1.png" alt="Zrzut ekranu aplikacji treningowej">
+            </div>
+            <div class="project-info">
+                <span class="badge">Aplikacja Webowa</span>
+                <h3>Aplikacja do śledzenia treningów</h3>
+                <p>Autorski system pozwalający na zapisywanie postępów w treningu siłowym i kalistenice, dostosowany do potrzeb użytkowników, którzy chcą zwiększać swoje możliwości fizyczne. Umożliwia monitorowanie objętości treningowej oraz analizę wyników w czasie rzeczywistym. Projekt został postawiony na domenie <a href="https://bicepslog.pl/" target="_blank" rel="noopener noreferrer">bicepslog.pl</a>.</p>
+                <div class="skills-pills">
+                    <span class="pill">Next.js</span>
+                    <span class="pill">React</span>
+                    <span class="pill">Firebase</span>
+                </div>
+                <div class="card-actions">
+                    <a href="https://bicepslog.pl/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Zobacz projekt na żywo &nearr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="center-action">
+            <a href="projekty.html" class="btn btn-outline">Więcej moich projektów &rarr;</a>
+        </div>
+    </section>
+
+    <section id="kontakt" class="bento-section">
+        <div class="bento-card contact-box">
+            <div class="contact-info">
+                <h2>Napisz do mnie</h2>
+                <p>Masz pytanie dotyczące moich projektów, chcesz nawiązać współpracę lub po prostu porozmawiać o technologii? Napisz do mnie na adres email lub bezpośrednio na GitHubie.</p>
+                
+            </div>
+			<div class="contact-info">
+				<div class="contact-links">
+                    <a href="mailto:piotr.piasko09@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i> piotr.piasko09@gmail.com</a>
+                    <a href="https://github.com/s4nd0" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-brands fa-github"></i> github.com/s4nd0</a>
+                </div>
+			</div>
+        </div>
+		
+    </section>
+</main>
         
 	</main>
 

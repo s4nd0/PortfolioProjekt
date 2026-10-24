@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
     const savedTheme = localStorage.getItem('theme');
     
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
-        themeToggleBtn.innerHTML = "Dark"
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
     }
 
     themeToggleBtn.addEventListener('click', () => {
@@ -13,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (body.classList.contains('dark-theme')) {
             localStorage.setItem('theme', 'dark');
-            themeToggleBtn.innerHTML = "Dark"
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
         } else {
             localStorage.setItem('theme', 'light');
-            themeToggleBtn.innerHTML = "Light"
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
         }
     });
 
