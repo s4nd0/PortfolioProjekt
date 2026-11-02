@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Piotr">
+    <meta name="description" content="Projekty programistyczne - Piotr Piasko">
+    <meta name="keywords" content="portfolio, projekty, react, python, typescript, programowanie">
+
+    <title>Projekty | Portfolio - Piotr Piasko</title>
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">
+            <a href="index.html" aria-label="Przejdź do strony głównej">Portfolio</a>
+        </h1>
+        
+        <nav class="nav-links" id="nav-links" aria-label="Główna nawigacja">
+            <a href="o-mnie.html">O mnie</a>
+            <a href="projekty.html">Projekty</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle"><i id="theme-icon" class="fa-regular fa-sun"></i></button>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro">
+            <h2>Wybrane projekty</h2>
+            <p>Zbiór aplikacji webowych, narzędzi przeglądarkowych oraz projektów hackathonowych. Kliknij przycisk szczegółów przy dowolnym projekcie, aby zobaczyć architekturę i główne funkcjonalności.</p>
+        </section>
+
+        <section class="bento-section" aria-label="Projekt wyróżniony">
+            <div class="bento-card featured-project spotlight-card">
+                <div class="project-image">
+                    <img src="images/projekt4.png" alt="Interfejs rozszerzenia Clarity wykrywającego dezinformację">
+                </div>
+                <div class="project-info">
+                    <div class="badges-row">
+                        <span class="badge">EUDIS Hackathon Poland 2026</span>
+                        <span class="badge badge-outline">Cyberbezpieczeństwo</span>
+                    </div>
+                    <h3>Clarity - Obrona przed wojną kognitywną</h3>
+                    <p>Rozszerzenie do przeglądarki oraz działający w czasie rzeczywistym silnik backendowy, które identyfikują taktyki wojny kognitywnej, zautomatyzowane boty i dezinformację w sieci.</p>
+                    
+                    <button class="details-toggle" aria-expanded="false">
+                        <span>Szczegóły techniczne projektu</span>
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="project-details-wrapper">
+                        <div class="project-details-content">
+                            <ul class="details-list">
+                                <li><strong>Weryfikacja źródeł (Truth-Scoring):</strong> Krzyżowe porównywanie przeglądanych treści ze zweryfikowanymi globalnymi bazami danych w celu błyskawicznej oceny wiarygodności.</li>
+                                <li><strong>Wykrywanie manipulacji:</strong> Identyfikacja wzorców językowych typowych dla polaryzacji, farm botów oraz skoordynowanych kampanii dezinformacyjnych.</li>
+                                <li><strong>Niskie obciążenie systemu:</strong> Lekka architektura klient-serwer zaprojektowana tak, aby analizować strony w tle bez spowalniania pracy przeglądarki.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skills-pills">
+                        <span class="pill">Python</span>
+                        <span class="pill">TypeScript</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Browser Extension API</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/s4nd0/CLARITY_V1" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Repozytorium GitHub &nearr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bento-section" aria-label="Projekt siłownia">
+            <div class="bento-card featured-project reversed-card">
+                <div class="project-info">
+                    <span class="badge">Aplikacja Webowa</span>
+                    <h3>Aplikacja do śledzenia treningów</h3>
+                    <p>Autorski system pozwalający na zapisywanie postępów w treningu siłowym i kalistenice, dostosowany do potrzeb użytkowników, którzy chcą zwiększać swoje możliwości fizyczne. Umożliwia monitorowanie objętości treningowej oraz analizę wyników w czasie rzeczywistym. Projekt został postawiony na domenie bicepslog.pl.</p>
+
+                    <button class="details-toggle" aria-expanded="false">
+                        <span>Szczegóły techniczne projektu</span>
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="project-details-wrapper">
+                        <div class="project-details-content">
+                            <ul class="details-list">
+                                <li><strong>Śledzenie treningów:</strong> Zapisywanie ćwiczeń, serii, powtórzeń oraz używanych ciężarów, aby precyzyjnie monitorować postępy.</li>
+                                <li><strong>Analiza progresu:</strong> Podgląd historii treningów i objętości treningowej, ułatwiający ocenę wyników w czasie.</li>
+                                <li><strong>Planowanie rozwoju:</strong> Wsparcie w organizacji treningów siłowych i kalistenicznych oraz systematycznym zwiększaniu swoich możliwości.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skills-pills">
+                        <span class="pill">ReactJS</span>
+                        <span class="pill">Firebase</span>
+                        <span class="pill">Vercel</span>
+                        <span class="pill">Tailwind CSS</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://bicepslog.pl" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Odwiedź bicepslog.pl &nearr;</a>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="images/projekt1.png" alt="Aplikacja bicepslog.pl do śledzenia treningów">
+                </div>
+            </div>
+        </section>
+
+        <section class="bento-section projects-pair-grid" aria-label="Aplikacje React">
+
+            <div class="bento-card featured-project vertical-card">
+                <div class="project-image">
+                    <img src="images/projekt3.png" alt="Widok dodawania zadania w aplikacji AdvancedTodoApp">
+                </div>
+                <div class="project-info">
+                    <span class="badge">Full-Stack Web App</span>
+                    <h3>AdvancedTodoApp</h3>
+                    <p>Zaawansowana aplikacja internetowa do zarządzania zadaniami i czasem, zintegrowana z chmurową bazą danych oraz systemem autoryzacji użytkowników.</p>
+
+                    <button class="details-toggle" aria-expanded="false">
+                        <span>Szczegóły techniczne projektu</span>
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="project-details-wrapper">
+                        <div class="project-details-content">
+                            <ul class="details-list">
+                                <li><strong>Autoryzacja i chmura:</strong> Bezpieczne logowanie i rejestracja użytkowników oraz zapisywanie zadań w bazie danych Firebase.</li>
+                                <li><strong>Pełny cykl CRUD:</strong> Szybkie dodawanie, edytowanie w miejscu, oznaczanie wykonania oraz usuwanie zadań.</li>
+                                <li><strong>Priorytety i kontrola czasu:</strong> Możliwość przypisywania poziomów ważności (niski, średni, krytyczny) oraz określania ram czasowych na wykonanie zadania.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skills-pills">
+                        <span class="pill">React</span>
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Firebase Auth</span>
+                        <span class="pill">Firestore DB</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/s4nd0/AdvancedTodoApp" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Zobacz kod &nearr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card featured-project vertical-card">
+                <div class="project-info">
+                    <span class="badge">Integracja API</span>
+                    <h3>SkyCast - Aplikacja Pogodowa</h3>
+                    <p>Responsywna aplikacja meteorologiczna pobierająca dane lokalizacyjne oraz aktualne parametry pogodowe z zewnętrznego interfejsu API w czasie rzeczywistym.</p>
+
+                    <button class="details-toggle" aria-expanded="false">
+                        <span>Szczegóły techniczne projektu</span>
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="project-details-wrapper">
+                        <div class="project-details-content">
+                            <ul class="details-list">
+                                <li><strong>Komunikacja z REST API:</strong> Asynchroniczne pobieranie i parsowanie danych meteorologicznych oraz geolokalizacyjnych.</li>
+                                <li><strong>Dynamiczny interfejs React:</strong> Interaktywne karty prezentujące temperaturę odczuwalną, wilgotność, ciśnienie oraz prędkość wiatru.</li>
+                                <li><strong>Mobile-First Design:</strong> Układ automatycznie dostosowujący kafelki pogodowe do ekranów smartfonów i monitorów.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skills-pills">
+                        <span class="pill">React</span>
+                        <span class="pill">JavaScript (ES6+)</span>
+                        <span class="pill">REST API</span>
+                        <span class="pill">CSS3</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/s4nd0/SkyCast" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Zobacz kod &nearr;</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="bento-section" aria-label="Projekt społecznościowy">
+            <div class="bento-card featured-project reversed-card">
+                <div class="project-info">
+                    <span class="badge">Platforma Kulinarna</span>
+                    <h3>Cooking-Ninja</h3>
+                    <p>Interaktywna aplikacja webowa dla pasjonatów gotowania, umożliwiająca tworzenie własnych przepisów kulinarnych, katalogowanie ich oraz współdzielenie z innymi w bazie danych.</p>
+
+                    <button class="details-toggle" aria-expanded="false">
+                        <span>Szczegóły techniczne projektu</span>
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="project-details-wrapper">
+                        <div class="project-details-content">
+                            <ul class="details-list">
+                                <li><strong>Kreator przepisów:</strong> Wielopolowy formularz pozwalający dynamicznie dodawać listę składników, czas przygotowania oraz szczegółową instrukcję.</li>
+                                <li><strong>Synchronizacja z Firebase:</strong> Natychmiastowy zapis nowych potraw w chmurowej bazie danych i aktualizowanie listy przepisów bez przeładowania strony.</li>
+                                <li><strong>Wyszukiwanie i podgląd:</strong> Przejrzysty podział na karty dań z szybkim dostępem do pełnego widoku wybranego przepisu.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="skills-pills">
+                        <span class="pill">ReactJS</span>
+                        <span class="pill">Firebase</span>
+                        <span class="pill">React Router</span>
+                        <span class="pill">CSS Grid</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://github.com/s4nd0/Cooking-Ninja" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Zobacz kod na GitHubie &nearr;</a>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="images/projekt2.png" alt="Aplikacja Cooking-Ninja">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Piotr Piasko. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

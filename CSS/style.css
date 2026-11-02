@@ -42,7 +42,7 @@ input, button, textarea, select {
 }
 
 /* Dla trybu ciemnego */
-body.dark-theme { 
+html.dark-theme { 
     --header-bg: #111827;
     --btn-color: #dedede;
     --bg-color: #161e30;
@@ -119,9 +119,6 @@ body.dark-theme {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease; 
     transition: padding 0.2s ease, border-color 0.3s ease;
-}
-.theme-toggle:hover {
-    
 }
 
 .container {
@@ -316,6 +313,105 @@ footer {
     font-size: 0.9rem;
 }
 
+.page-intro {
+    max-width: 750px;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.page-intro h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.badges-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.badge-outline {
+    background-color: transparent;
+    border: 1px solid var(--hover-color);
+    color: var(--hover-color);
+}
+
+.spotlight-card {
+    border: 2px solid var(--hover-color);
+}
+
+.projects-pair-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.featured-project.vertical-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.details-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: none;
+    color: var(--text-color);
+    border: 0;
+    padding: 0.25rem 0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-align: left;
+}
+
+.details-toggle:hover {
+    color: var(--hover-color);
+}
+
+.arrow-icon {
+    transition: transform 0.35s ease;
+    flex-shrink: 0;
+}
+
+.details-toggle[aria-expanded="true"] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.project-details-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.35s ease, opacity 0.3s ease, margin 0.35s ease;
+}
+
+.project-details-wrapper.open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-details-content {
+    overflow: hidden;
+}
+
+.details-list {
+    list-style-position: inside;
+    background-color: var(--bg-color);
+    border-left: 3px solid var(--hover-color);
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.92rem;
+}
+
 @media (min-width: 769px) {
     .nav-links {
         position: absolute;
@@ -371,5 +467,13 @@ footer {
 
     .hero-intro h2 {
         font-size: 1.75rem;
+    }
+
+    .projects-pair-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reversed-card .project-image {
+        order: -1;
     }
 }

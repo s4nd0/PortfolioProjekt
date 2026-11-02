@@ -4,35 +4,40 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Piotr">
-	<meta name="description" content="Portfolio Piotra">
+	<meta name="description" content="Portfolio Piotr Piasko">
 	<meta name="keywords" content="portfolio, projekty, programowanie">
 
-	<title>Portfolio</title>
+	<title>Portfolio - Piotr Piasko</title>
+	<script>
+		if (localStorage.getItem('theme') === 'dark') {
+			document.documentElement.classList.add('dark-theme');
+		}
+	</script>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="CSS/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 	<header class="main-header">
-    <h1 class="logo">
-        <a href="index.html" aria-label="Przejdź do strony głównej">Portfolio</a>
-    </h1>
-    
-    <nav class="nav-links" id="nav-links" aria-label="Główna nawigacja">
-        <a href="o-mnie.html">O mnie</a>
-		<a href="projekty.html">Projekty</a>
-		<a href="#kontakt">Kontakt</a>
-    </nav>
+        <h1 class="logo">
+            <a href="index.html" aria-label="Przejdź do strony głównej">Portfolio</a>
+        </h1>
+        
+        <nav class="nav-links" id="nav-links" aria-label="Główna nawigacja">
+            <a href="o-mnie.html">O mnie</a>
+            <a href="projekty.html">Projekty</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
 
-    <div class="header-actions">
-        <button id="theme-toggle" class="theme-toggle"><i id="theme-icon" class="fa-regular fa-sun"></i></button>
-        <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-    </div>
-</header>
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle"><i id="theme-icon" class="fa-regular fa-sun"></i></button>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
 
 	<main>
 		<main class="container">
