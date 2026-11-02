@@ -1,1 +1,75 @@
 <!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Piotr">
+	<meta name="description" content="Informacje o mnie - Piotr Piasko">
+	<meta name="keywords" content="o mnie, informacje, Piotr Piasko">
+
+	<title>O mnie | Portfolio - Piotr Piasko</title>
+	<script>
+		if (localStorage.getItem('theme') === 'dark') {
+			document.documentElement.classList.add('dark-theme');
+		}
+	</script>
+	<link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="logo">
+            <a href="index.html" aria-label="Przejdź do strony głównej">Portfolio</a>
+        </h1>
+        
+        <nav class="nav-links" id="nav-links" aria-label="Główna nawigacja">
+            <a href="index.html">Strona główna</a>
+            <a href="o-mnie.html">O mnie</a>
+            <a href="projekty.html">Projekty</a>
+            <a href="index.html#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="header-actions">
+            <button id="theme-toggle" class="theme-toggle"><i id="theme-icon" class="fa-regular fa-sun"></i></button>
+            <button id="hamburger-btn" class="hamburger-btn" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+<main class="container">
+        <section class="page-intro">
+            <h2>O mnie</h2>
+        </section>
+
+        <section class="bento-section projects-pair-grid" aria-label="Aplikacje React">
+
+            <div class="bento-card vertical-card">
+                <div class="project-info">
+                    <h3>Gdzie studiuję</h3>
+                    <p>Jestem studentem 3 roku informatyki na Politechnice Lubelskiej, gdzie rozwijam swoje umiejętności z zakresu programowania i technologii informacyjnych.</p>
+                </div>
+            </div>
+
+            <div class="bento-card vertical-card">
+                <div class="project-info">
+                    <h3>Moje umiejętności</h3>
+                    <p>Pracuję nad różnymi projektami, w tym aplikacjami webowymi i stronami internetowymi. Moje zainteresowania obejmują zarówno programowanie, jak i design. Poza tworzeniem aplikacji, zajmuję się tworzeniem i projektowaniem modeli 3D na drukarce Bambu Lab.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+		<p>&copy; 2026 Piotr Piasko. Wszelkie prawa zastrzeżone.</p>
+	</footer>
+
+	<script src="JS/script.js"></script>
+</body>
+</html>
